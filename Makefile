@@ -1,6 +1,6 @@
 IMAGE_NAME ?= cmdlabs/terragrunt-utils
 
-RELEASE_VERSION = 0.1.0
+RELEASE_VERSION = 1.0.0
 BUILD_VERSION ?= testing
 
 ifdef CI_COMMIT_REF_NAME
