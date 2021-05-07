@@ -2,14 +2,14 @@ FROM alpine:3.12
 
 RUN apk add --update --no-cache py3-pip ca-certificates curl git openssh-client
 
-ENV TERRAFORM_VERSION=0.12.31
+ENV TERRAFORM_VERSION=0.14.11
 RUN curl -sSL -o /tmp/terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip /tmp/terraform.zip -d /tmp/ && \
     mv /tmp/terraform /usr/local/bin/terraform && \
     chmod +x /usr/local/bin/terraform && \
     rm -rf /tmp/terraform.zip
 
-ARG TERRAGRUNT_VERSION=v0.23.33
+ARG TERRAGRUNT_VERSION=v0.23.40
 RUN curl -sSL -o /usr/local/bin/terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/${TERRAGRUNT_VERSION}/terragrunt_linux_amd64 && \
     chmod +x /usr/local/bin/terragrunt
 
