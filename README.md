@@ -25,7 +25,7 @@ docker-compose.yml:
 ```yaml
 services:
   tg:
-    image: cmdlabs/terragrunt-utils:0.1.0
+    image: cmdlabs/terragrunt-utils:1.2.0
     volumes:
       - .:/work:Z
 ```
