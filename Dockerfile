@@ -1,6 +1,6 @@
 FROM alpine:3.17
 
-RUN apk add --update --no-cache ca-certificates curl git openssh terraform aws-cli
+RUN apk add --update --no-cache ca-certificates curl git openssh-client-default aws-cli
 
 ENV TERRAFORM_VERSION=1.3.9
 RUN curl -sSL -o /tmp/terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
